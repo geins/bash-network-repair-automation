@@ -91,7 +91,8 @@ while [ $network_check_tries -lt $network_check_threshold ]; do
     # If the gateway checks are successful.
     if check_gateways; then
         # Network is up.
-        date_log "Network is working correctly" && exit 0
+        # date_log "Network is working correctly" && exit 0
+        exit 0
     else
         # Network is down.
         date_log "Network is down, failed check number $network_check_tries of $network_check_threshold"
